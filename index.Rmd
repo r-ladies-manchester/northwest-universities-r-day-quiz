@@ -1,0 +1,79 @@
+---
+title: "Northwest Universities R Day 2018 - Pub Quiz"
+author: "Northwest Universities R Day Organisers"
+date: "31 October 2018"
+output:
+  html_document:
+    css: "style.css"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## I see dead people
+
+### Question 1
+
+Where do the remains of R. A Fisher lie?
+
+```{r}
+print("St Peter’s Cathedral, Adelaide, Adelaide City, South Australia, Australia")
+```
+
+### Question 2
+
+What deceased statistician said "All models are wrong but some are useful"?
+
+```{r}
+print("George Box")
+```
+
+### Question 3
+
+What deceased person is credited with first using the term "regression" to describe the relationship between two variables?
+
+```{r}
+print("Francis Galton")
+```
+
+### Question 4
+
+What well-known company hired the (now deceased), pseudonymous “Student” (a.k.a. William Sealy Gosset) in 1899?
+
+```{r}
+print("Guinness")
+```
+
+### Question 5
+
+What famous female historical figure is credited with innovative use of information graphics, like the polar area diagram?
+
+```{r}
+print("Florence Nightingale")
+```
+
+## R-related questions
+
+### Question 1
+
+Which one of these data sets is not in the R `datasets` package:
+
+- `ldeaths` (Monthly Deaths from Lung Diseases in the UK)
+- `USArrests` (Violent Crime Rates by US State)
+- `gapminder` (Excerpt of the Gapminder data on life expectancy, GDP per capita, and population by country)
+- `HairEyeColor` (Hair and Eye Color of Statistics Students)
+
+## Question 2
+
+If you get the error
+
+```
+Error in rcorr() : could not find function "rcorr"
+```
+
+which package have you forgotten to load?
+
+## Question 3
+
+What colour is your chart background if you use `theme_excel()` from the `ggthemes` package?
