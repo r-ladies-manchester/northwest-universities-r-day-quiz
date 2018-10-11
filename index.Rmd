@@ -55,7 +55,7 @@ print("Florence Nightingale")
 
 ## R-related questions
 
-### Question 1
+#### Question 6
 
 Which one of these data sets is not in the R `datasets` package:
 
@@ -64,7 +64,7 @@ Which one of these data sets is not in the R `datasets` package:
 - `gapminder` (Excerpt of the Gapminder data on life expectancy, GDP per capita, and population by country)
 - `HairEyeColor` (Hair and Eye Color of Statistics Students)
 
-## Question 2
+### Question 7
 
 If you get the error
 
@@ -74,6 +74,38 @@ Error in rcorr() : could not find function "rcorr"
 
 which package have you forgotten to load?
 
-## Question 3
+### Question 8
 
 What colour is your chart background if you use `theme_excel()` from the `ggthemes` package?
+
+## Some coding questions
+
+### Question 9
+
+Write code to reproduce the graphic below.
+
+### Question 10
+
+Match the following codes with their result.
+
+#### Codes
+
+- `10 %% 2`
+- `1:10 * 2`
+- `1:10%%2`
+- `1:10 * 2 %% 2`
+- `1:(10 * 2)`
+- `11 %% 2`
+
+#### Result
+
+- `r 10 %% 2`
+- `r 1:10 * 2`
+- `r 1:10%%2`
+- `r 1:10 * 2 %% 2`
+- `r 1:(10 * 2)`
+- `r 11 %% 2`
+
+## Tie breaker
+
+Make the best coloured version of plot 4b
