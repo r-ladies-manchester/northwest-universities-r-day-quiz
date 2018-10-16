@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## I see dead people
 
-### Question 1
+### Question 01
 
 Where do the remains of R. A Fisher lie?
 
@@ -21,7 +21,7 @@ Where do the remains of R. A Fisher lie?
 print("St Peter’s Cathedral, Adelaide, Adelaide City, South Australia, Australia")
 ```
 
-### Question 2
+### Question 02
 
 What deceased statistician said "All models are wrong but some are useful"?
 
@@ -29,7 +29,7 @@ What deceased statistician said "All models are wrong but some are useful"?
 print("George Box")
 ```
 
-### Question 3
+### Question 03
 
 What deceased person is credited with first using the term "regression" to describe the relationship between two variables?
 
@@ -37,7 +37,7 @@ What deceased person is credited with first using the term "regression" to descr
 print("Francis Galton")
 ```
 
-### Question 4
+### Question 04
 
 What well-known company hired the (now deceased), pseudonymous “Student” (a.k.a. William Sealy Gosset) in 1899?
 
@@ -45,12 +45,54 @@ What well-known company hired the (now deceased), pseudonymous “Student” (a.
 print("Guinness")
 ```
 
-### Question 5
+### Question 05
 
 What famous female historical figure is credited with innovative use of information graphics, like the polar area diagram?
 
 ```{r}
 print("Florence Nightingale")
+```
+
+## The R-things
+
+### Question 06
+
+What is the name of the town in England North West starts with R and has a twinning city/town?
+
+```{r}
+print("Rochdale")
+```
+
+### Question 07
+
+What is the name of one of the Economics Nobel laureates who surname starts with R?
+
+```{r}
+print("Paul Romer")
+```
+
+### Question 08
+
+On the TV show "Buffy, the Vampire Slayer", which run between 1996 and 2003, what is the name of  Buffy Summers' teacher and mentor?
+
+```{r}
+print("Rupert Giles")
+```
+
+### Question 09
+
+What is the name of the captain of the boat which picked up Victor in Mary Shelley famous book "The Modern Prometheus", also know as "Frankenstein".
+
+```{r}
+print("Captain Robert Walton")
+```
+
+### Question 10
+
+What is the name of the English inventor best known for designing a drop box to improve the capability of weaving looms and son of John Kay?
+
+```{r}
+print("Robert Kay")
 ```
 
 ## R-related questions
