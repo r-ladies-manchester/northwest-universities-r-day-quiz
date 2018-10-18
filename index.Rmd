@@ -4,11 +4,14 @@ author: "Northwest Universities R Day Organisers"
 date: "31 October 2018"
 output:
   html_document:
-    css: "style.css"
+    css: ["style.css", "fontawesome/css/all.min.css"]
 ---
 
 ```{r setup, include=FALSE}
+# For the attendees print use include = FALSE
+# For the solution print use echo = False
 knitr::opts_chunk$set(echo = FALSE)
+
 ```
 
 ## I see dead people
@@ -97,7 +100,7 @@ print("Robert Kay")
 
 ## R-related questions
 
-#### Question 6
+### Question 11
 
 Which one of these data sets is not in the R `datasets` package:
 
@@ -106,7 +109,7 @@ Which one of these data sets is not in the R `datasets` package:
 - `gapminder` (Excerpt of the Gapminder data on life expectancy, GDP per capita, and population by country)
 - `HairEyeColor` (Hair and Eye Color of Statistics Students)
 
-### Question 7
+### Question 12
 
 If you get the error
 
@@ -116,38 +119,78 @@ Error in rcorr() : could not find function "rcorr"
 
 which package have you forgotten to load?
 
-### Question 8
+### Question 13
 
 What colour is your chart background if you use `theme_excel()` from the `ggthemes` package?
 
+### Question 14
+
+### Question 15
+
 ## Some coding questions
 
-### Question 9
+### Question 16
 
 Write code to reproduce the graphic below.
 
-### Question 10
+### Question 17
 
 Match the following codes with their result.
 
-#### Codes
+<div class="row">
+<div class="column left">
+Codes
 
-- `10 %% 2`
-- `1:10 * 2`
-- `1:10%%2`
-- `1:10 * 2 %% 2`
-- `1:(10 * 2)`
-- `11 %% 2`
+1. `10 %% 2`
+2. `1:10 * 2`
+3. `1:10%%2`
+4. `1:10 * 2 %% 2`
+5. `1:(10 * 2)`
+6. `11 %% 2`
+</div>
+<div class="column right">
+Result
 
-#### Result
+A.  `r 10 %% 2`
+B.  `r 1:10 * 2`
+C.  `r 1:10%%2`
+D.  `r 1:10 * 2 %% 2`
+E.  `r 1:(10 * 2)`
+F.  `r 11 %% 2`
+</div>
+</div>
 
-- `r 10 %% 2`
-- `r 1:10 * 2`
-- `r 1:10%%2`
-- `r 1:10 * 2 %% 2`
-- `r 1:(10 * 2)`
-- `r 11 %% 2`
+### Question 18
+
+### Question 19
+
+### Question 20
 
 ## Tie breaker
 
 Make the best coloured version of plot 4b
+
+<div class="row credits">
+<div class="column left">
+## Organisers
+
+![MMUseR](media/mmuser.png)
+
+![RUM](media/rum.png)
+</div>
+<div class="column right">
+## Support
+
+![R Consortium](media/r-consortium.png)
+
+![Software Sustainability Institute](media/ssi.png)
+
+![Manchester Metropolitan University](media/mmu.png)
+
+![University of Manchester](media/uofm.png)
+
+![Mango](media/mango.png)
+
+![Manchester Science Partnership](media/msp.jpeg)
+</div>
+</div>

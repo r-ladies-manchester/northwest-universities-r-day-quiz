@@ -1,0 +1,51 @@
+#header,
+h2 {
+    background: black;
+    color: yellow;
+    text-align: center;
+    padding: 5px;
+}
+
+h2::before,
+h2::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f717";  /* spider */
+}
+h2::before {
+    padding-right: 10px;
+}
+h2::after {
+    padding-left: 10px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.column.left ol{
+list-style: decimal;
+}
+
+.column.right ol{
+list-style: upper-latin;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div.credits div.figure {
+  margin: 10px;
+  text-align: center;
+}
+div.credits div.figure img {
+  max-height: 100px;
+}
+div.credits p.caption {
+  display: none;
+}
