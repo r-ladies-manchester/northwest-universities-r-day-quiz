@@ -104,28 +104,195 @@ print("Robert Kay")
 
 Which one of these data sets is not in the R `datasets` package:
 
-- `ldeaths` (Monthly Deaths from Lung Diseases in the UK)
-- `USArrests` (Violent Crime Rates by US State)
-- `gapminder` (Excerpt of the Gapminder data on life expectancy, GDP per capita, and population by country)
-- `HairEyeColor` (Hair and Eye Color of Statistics Students)
+```{r}
+library("datasets")
+```
+
+A.  `Apple`, Growth of Apple Trees
+
+    ```{r}
+    exists("Apple")
+    ```
+B. `Titanic`, Survival of passengers on the Titanic
+
+    ```{r}
+    exists("Titanic")
+    ```
+C.  `UKDriverDeaths`, Road Casualties in Great Britain 1969-84
+
+    ```{r}
+    exists("UKDriverDeaths")
+    ```
+D.  `UKLungDeaths`, Monthly Deaths from Lung Diseases in the UK
+
+    ```{r}
+    exists("UKLungDeaths")
+    ```
+E.  `UKgas`, UK Quarterly Gas Consumption
+
+    ```{r}
+    exists("UKgas")
+    ```
 
 ### Question 12
 
 If you get the error
 
-```
-Error in rcorr() : could not find function "rcorr"
+```{r echo=FALSE, error=TRUE}
+data <- data.frame(
+  id=c(1, 1, 2, 2),
+  time=c(1, 2, 1, 2),
+  x1=c(5, 3, 6, 2),
+  x2=c(5, 6, 1, 4)
+)
+gather(data, id=c("id","time"))
 ```
 
 which package have you forgotten to load?
 
+A.  `dplyr`
+
+    ```{r}
+    library(dplyr)
+    exists('gather', where='package:dplyr', mode='function')
+    ```
+B.  `tibble`
+
+    ```{r}
+    library(tibble)
+    exists('gather', where='package:tibble', mode='function')
+    ```
+C.  `resize2`
+
+    ```{r, error=TRUE}
+    library(resize2)
+    exists('gather', where='package:resize2', mode='function')
+    ```
+D.  `reshape2`
+
+    ```{r}
+    library(reshape2)
+    exists('gather', where='package:reshape2', mode='function')
+    ```
+E.  `tidyr`
+
+    ```{r}
+    library(tidyr)
+    exists('gather', where='package:tidyr', mode='function')
+    ```
+
 ### Question 13
 
-What colour is your chart background if you use `theme_excel()` from the `ggthemes` package?
+```{r}
+library(ggplot2)
+```
+
+Given
+
+```{r, echo=TRUE}
+data <- data.frame(
+  numbers=sample(1:10, 100, replace=TRUE)
+)
+c <- ggplot(data, aes(numbers))
+```
+
+Which one of the following commands will fail?
+
+A.  `c + geom_area(stat = "bin")`
+
+    ```{r}
+    ggplot(data, aes(numbers)) + geom_area(stat = "bin")
+    ```
+B.  `c + geom_density(kernel = "gaussian")`
+
+    ```{r}
+    ggplot(data, aes(numbers)) + geom_density(kernel = "gaussian")
+    ```
+C.  `c + geom_point()`
+
+    ```{r, error=TRUE}
+    ggplot(data, aes(numbers)) + geom_point()
+    ```
+D.  `c + geom_dotplot()`
+
+    ```{r}
+    ggplot(data, aes(numbers)) + geom_dotplot()
+    ```
+E.  `c + geom_histogram()`
+
+    ```{r}
+    ggplot(data, aes(numbers)) + geom_histogram()
+    ```
 
 ### Question 14
 
+```{r}
+library(devtools)
+```
+
+When using devtools v1.12.0,
+which one of the following options will fail?
+
+A.  `devtools::install_github("foo/bar")`
+
+    ```{r}
+    exists('install_github', where='package:devtools', mode='function')
+    ```
+B.  `devtools::install_gitlab("foo/bar")`
+
+    ```{r}
+    exists('install_gitlab', where='package:devtools', mode='function')
+    ```
+C.  `devtools::install_bitbucket("foo/bar")`
+
+    ```{r}
+    exists('install_bitbucket', where='package:devtools', mode='function')
+    ```
+D.  `devtools::install_svn("https://foo.com/bar.git")`
+
+    ```{r}
+    exists('install_svn', where='package:devtools', mode='function')
+    ```
+E.  `devtools::install_bioc("FooBar")`
+
+    ```{r}
+    exists('install_bioc', where='package:devtools', mode='function')
+    ```
+
 ### Question 15
+
+```{r}
+library(stringr)
+```
+
+When using stringr v1.3.1,
+which one of the following options isn't a valid function name?
+
+A.  `str_c`
+
+    ```{r}
+    exists('str_c', where='package:stringr', mode='function')
+    ```
+B.  `str_find`
+
+    ```{r}
+    exists('str_find', where='package:stringr', mode='function')
+    ```
+C.  `str_length`
+
+    ```{r}
+    exists('str_length', where='package:stringr', mode='function')
+    ```
+D.  `str_replace`
+
+    ```{r}
+    exists('str_replace', where='package:stringr', mode='function')
+    ```
+E.  `str_trunc`
+
+    ```{r}
+    exists('str_trunc', where='package:stringr', mode='function')
+    ```
 
 ## Some coding questions
 
