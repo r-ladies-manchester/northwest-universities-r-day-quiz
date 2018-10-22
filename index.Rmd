@@ -11,7 +11,6 @@ output:
 # For the attendees print use include = FALSE
 # For the solution print use echo = False
 knitr::opts_chunk$set(echo = FALSE)
-
 ```
 
 ## I see dead people
@@ -296,11 +295,13 @@ E.  `str_trunc`
 
 ## Some coding questions
 
-### Question 16
-
-Write code to reproduce the graphic below.
-
 ### Question 17
+
+Given
+
+```{r}
+v <- c(104, 97, 108, 108, 111, 119, 101, 101, 110)
+```
 
 Match the following codes with their result.
 
@@ -308,24 +309,63 @@ Match the following codes with their result.
 <div class="column left">
 Codes
 
-1. `10 %% 2`
-2. `1:10 * 2`
-3. `1:10%%2`
-4. `1:10 * 2 %% 2`
-5. `1:(10 * 2)`
-6. `11 %% 2`
+1. `intToUtf8(v)`
+2. `v %% 2`
+3. `v %/% 2`
+4. `as.roman(v)`
+4. `as.hexmode(v)`
+4. `as.logical(v)`
 </div>
 <div class="column right">
 Result
 
-A.  `r 10 %% 2`
-B.  `r 1:10 * 2`
-C.  `r 1:10%%2`
-D.  `r 1:10 * 2 %% 2`
-E.  `r 1:(10 * 2)`
-F.  `r 11 %% 2`
+A.  `r intToUtf8(v)`
+B.  `r v %% 2`
+C.  `r v %/% 2`
+D.  `r as.roman(v)`
+E.  `r as.hexmode(v)`
+F.  `r as.logical(v)`
 </div>
 </div>
+
+### Question 16
+
+Given
+
+```{r}
+library(nycflights13)
+flights %>%
+  head(5) %>%
+  knitr::kable()
+```
+
+Replace `▮▮▮▮▮▮▮▮ ` with the name of one function in
+
+```
+flights %>%
+  ▮▮▮▮▮▮▮▮(year, month, day) %>%
+  ▮▮▮▮▮▮▮▮(arr_delay, dep_delay) %>%
+  ▮▮▮▮▮▮▮▮(
+    arr = mean(arr_delay, na.rm = TRUE),
+    dep = mean(dep_delay, na.rm = TRUE)
+  ) %>%
+  ▮▮▮▮▮▮▮▮(arr > 30 | dep > 30) 
+```
+
+for have the output as show below.
+
+```{r}
+flights %>%
+  group_by(year, month, day) %>%
+  select(arr_delay, dep_delay) %>%
+  summarise(
+    arr = mean(arr_delay, na.rm = TRUE),
+    dep = mean(dep_delay, na.rm = TRUE)
+  ) %>%
+  filter(arr > 30 | dep > 30) %>%
+  head(5) %>%
+  knitr::kable()
+```
 
 ### Question 18
 
