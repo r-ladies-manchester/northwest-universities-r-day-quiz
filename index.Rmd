@@ -17,29 +17,38 @@ knitr::opts_chunk$set(include = FALSE)
 
 ### Question 01
 
+What is the name of a famous science fiction author who die in 2 September 1973 and has "RR" as their middle initials?
+
+```{r}
+print("John Ronald Reuel Tolkien")
+```
+
+### Question 02
+
+Sir Ronald Aylmer Fisher was a British statistician and geneticist who die in 29 July 1962.
 Where do the remains of R. A Fisher lie?
 
 ```{r}
 print("St Peter’s Cathedral, Adelaide, Adelaide City, South Australia, Australia")
 ```
 
-### Question 02
-
-What deceased statistician said "All models are wrong but some are useful"?
-
-```{r}
-print("George Box")
-```
-
 ### Question 03
 
-What deceased person is credited with first using the term "regression" to describe the relationship between two variables?
+What is the name of the British statistician who die in 28 March 2013 and said "All models are wrong but some are useful"?
 
 ```{r}
-print("Francis Galton")
+print("George Edward Pelham Box")
 ```
 
 ### Question 04
+
+What is the name of the British statistician who die in 17 January 1911 and is credited with first using the term "regression" to describe the relationship between two variables?
+
+```{r}
+print("Sir Francis Galton")
+```
+
+### Question 05
 
 What well-known company hired the (now deceased), pseudonymous “Student” (a.k.a. William Sealy Gosset) in 1899?
 
@@ -47,17 +56,33 @@ What well-known company hired the (now deceased), pseudonymous “Student” (a.
 print("Guinness")
 ```
 
-### Question 05
+### Question 06
 
-What famous female historical figure is credited with innovative use of information graphics, like the polar area diagram?
+What famous female historical figure die in 13 August 1910 and is credited with innovative use of information graphics, like the polar area diagram?
 
 ```{r}
 print("Florence Nightingale")
 ```
 
+### Question 07
+
+What is the name of the scientist that die in 1 April 1922 and is know for designed the ink blot test, a personality test that involves the evaluation of a subject's response to ambiguous ink blots and used to analyze inner thoughts, feelings, and personality traits?
+
+```{r}
+print("Hermann Rorschach")
+```
+
 ## The R-things
 
-### Question 06
+### Question 08
+
+What is the English name for the widespread species *Corvus corax*, often associated with death?
+
+```{r}
+print("(Common) Raven")
+```
+
+### Question 09
 
 "Sister cities or twin towns are a form of legal or social agreement between towns (...) in geographically and politically distinct areas to promote cultural and commercial ties." (Wikipedia) What is the name of the town in Greater Manchester that starts with R and has Bielefeld in Germany, Tourcoing in France, Sahiwal in Pakistan and Lviv in Ukraine as twinning city/town?
 
@@ -65,7 +90,7 @@ print("Florence Nightingale")
 print("Rochdale")
 ```
 
-### Question 07
+### Question 10
 
 Name the 2017 Nobel Laureate in Economics who besides his recognition for contributions to behavioural economics has also reached fame in popular culture, for example making a cameo next to Selena Gomez in 'The Big Short'.
 
@@ -73,7 +98,7 @@ Name the 2017 Nobel Laureate in Economics who besides his recognition for contri
 print("Richard Thaler")
 ```
 
-### Question 08
+### Question 11
 
 On the TV show "Buffy, the Vampire Slayer", which run between 1996 and 2003, what is the name of  Buffy Summers' teacher and mentor?
 
@@ -81,7 +106,7 @@ On the TV show "Buffy, the Vampire Slayer", which run between 1996 and 2003, wha
 print("Rupert Giles")
 ```
 
-### Question 09
+### Question 12
 
 Mary Shelley famous book “The Modern Prometheus”, also know as “Frankenstein” is narrated through a fictional correspondence between the Captain of the boat which picked up Victor Frankenstein, the crazed scientists who created a monster. What is the name of this captain?
 
@@ -89,17 +114,34 @@ Mary Shelley famous book “The Modern Prometheus”, also know as “Frankenste
 print("Captain Robert Walton")
 ```
 
-### Question 10
+### Question 13
 
-What is the name of the English inventor best known for designing a drop box to improve the capability of weaving looms and son of John Kay?
+What is the name of the English inventor and son of John Kay, best known for designing a drop box to improve the capability of weaving looms?
 
 ```{r}
 print("Robert Kay")
 ```
 
+### Question 14
+
+"Wraith is a Scottish dialectal word for 'ghost' or 'spirit'." (Wikipedia) It is also the name of a 4 seat luxury car. Which company the Wraith? 
+
+```{r}
+print("Rolls-Royce Motor Cars")
+```
+
+### Question 15
+
+On the cinematic adaptation of J. K. Rowling's novel Harry Potter, what is the role cast by Rupert Alexander Lloyd Grint?
+
+
+```{r}
+print("Ron Weasley")
+```
+
 ## R-related questions
 
-### Question 11
+### Question 16
 
 Which one of these data sets is not in the R `datasets` package:
 
@@ -133,7 +175,7 @@ E.  `UKgas`, UK Quarterly Gas Consumption
     exists("UKgas")
     ```
 
-### Question 12
+### Question 17
 
 If you get the error
 
@@ -180,85 +222,37 @@ E.  `tidyr`
     exists('gather', where='package:tidyr', mode='function')
     ```
 
-### Question 13
+### Question 18
+
+What colour is your chart background if you use `theme_excel()` from the `ggthemes` package?
+
+A.  White
+B.  Yellow
+C.  Gray or dark gray
+D.  Silver or light gray
+D.  Blue
 
 ```{r}
 library(ggplot2)
-```
+library(ggthemes)
 
-Given
-
-```{r, echo=TRUE}
 data <- data.frame(
   numbers=sample(1:10, 100, replace=TRUE)
 )
-c <- ggplot(data, aes(numbers))
+ggplot(data, aes(numbers)) + theme_excel()
 ```
 
-Which one of the following commands will fail?
+### Question 19
 
-A.  `c + geom_area(stat = "bin")`
+The family of apply functions pertains to the R base package, and is populated with functions to manipulate slices of data from matrices, arrays, lists and data frames in a repetitive way. For example the `lapply` function takes list, vector or data frame as input and returns only list as output. Which one of these is not a function in the apply family:
 
-    ```{r}
-    ggplot(data, aes(numbers)) + geom_area(stat = "bin")
-    ```
-B.  `c + geom_density(kernel = "gaussian")`
+A.  `vapply`
+B.  `mapply`
+C.  `rapply`
+D.  `tapply`
+E.  `papply`
 
-    ```{r}
-    ggplot(data, aes(numbers)) + geom_density(kernel = "gaussian")
-    ```
-C.  `c + geom_point()`
-
-    ```{r, error=TRUE, include=TRUE}
-    ggplot(data, aes(numbers)) + geom_point()
-    ```
-D.  `c + geom_dotplot()`
-
-    ```{r}
-    ggplot(data, aes(numbers)) + geom_dotplot()
-    ```
-E.  `c + geom_histogram()`
-
-    ```{r}
-    ggplot(data, aes(numbers)) + geom_histogram()
-    ```
-
-### Question 14
-
-```{r}
-library(devtools)
-```
-
-When using devtools v1.12.0,
-which one of the following options will fail?
-
-A.  `devtools::install_github("foo/bar")`
-
-    ```{r}
-    exists('install_github', where='package:devtools', mode='function')
-    ```
-B.  `devtools::install_gitlab("foo/bar")`
-
-    ```{r}
-    exists('install_gitlab', where='package:devtools', mode='function')
-    ```
-C.  `devtools::install_bitbucket("foo/bar")`
-
-    ```{r}
-    exists('install_bitbucket', where='package:devtools', mode='function')
-    ```
-D.  `devtools::install_svn("https://foo.com/bar.git")`
-
-    ```{r}
-    exists('install_svn', where='package:devtools', mode='function')
-    ```
-E.  `devtools::install_bioc("FooBar")`
-
-    ```{r}
-    exists('install_bioc', where='package:devtools', mode='function')
-    ```
-
-### Question 15
+### Question 20
 
 ```{r}
 library(stringr)
@@ -295,7 +289,7 @@ E.  `str_trunc`
 
 ## Some coding questions
 
-### Question 17
+### Question 21
 
 Given
 
@@ -317,10 +311,6 @@ Codes
 6. `as.logical(v)`
 </div>
 <div class="column right">
-```{r include=TRUE}
-as.roman(v)
-```
-
 Result
 
 A.  `r as.roman(v)`
@@ -333,13 +323,14 @@ F.  `r as.hexmode(v)`
 </div>
 </div>
 
-### Question 16
+### Question 22
 
 Given
 
 ```{r echo=FALSE, include=TRUE}
 library(nycflights13)
 flights %>%
+  select(year, month, day, dep_time, dep_delay, arr_time, arr_delay, carrier, flight, origin, dest) %>%
   head(5) %>%
   knitr::kable()
 ```
@@ -359,7 +350,7 @@ flights %>%
 
 for have the output as show below.
 
-```{r}
+```{r include=TRUE}
 flights %>%
   group_by(year, month, day) %>%
   select(arr_delay, dep_delay) %>%
@@ -372,7 +363,7 @@ flights %>%
   knitr::kable()
 ```
 
-### Question 18
+### Question 23
 
 When using Shiny v1.1.0,
 which of the options below isn't a valid input type?
@@ -383,7 +374,7 @@ C.  `numericInput("dynamic", "Dynamic", value = 12)`
 D.  `checkboxInput("dynamic", "Dynamic", value = TRUE)`
 E.  `dateInput("dynamic", "Dynamic")`
 
-### Question 19
+### Question 24
 
 Write a valid documentation to the source file below that will be processed by roxygen2 v6.1.0.
 
@@ -393,7 +384,7 @@ trick.or.treat <- function(house.number) {
 }
 ```
 
-### Question 20
+### Question 25
 
 When using testthat v2.0.0,
 which one of the following options the test will pass?
