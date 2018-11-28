@@ -10,7 +10,8 @@ output:
 ```{r setup, include=FALSE}
 # For the attendees print use include = FALSE
 # For the solution print use echo = False
-knitr::opts_chunk$set(include = FALSE)
+knitr::opts_chunk$set(echo=FALSE)
+knitr::opts_chunk$set(comment="")
 ```
 
 ## I see dead people
